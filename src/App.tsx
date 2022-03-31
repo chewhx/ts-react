@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as packageJson from '../package.json';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<h1>React Typescript</h1>
+			<pre>
+				{`
+          .
+          ├── README.md
+          ├── package-lock.json
+          ├── package.json
+          ├── public
+          │   ├── favicon.ico
+          │   ├── index.html
+          │   ├── logo192.png
+          │   ├── logo512.png
+          │   ├── manifest.json
+          │   └── robots.txt
+          ├── src
+          │   ├── App.tsx
+          │   ├── assets
+          │   │   ├── images
+          │   │   └── scss
+          │   │       ├── _bootstrap.scss
+          │   │       └── styles.scss
+          │   ├── components
+          │   ├── hooks
+          │   ├── index.tsx
+          │   ├── layouts
+          │   ├── modules
+          │   │   ├── api
+          │   │   ├── auth
+          │   │   ├── notifications
+          │   │   ├── providers
+          │   │   ├── routes
+          │   │   └── utils
+          │   ├── react-app-env.d.ts
+          │   └── views
+          │       ├── private
+          │       └── public
+          └── tsconfig.json
+        `}
+			</pre>
+			<pre>{JSON.stringify(packageJson, null, 2)}</pre>
+		</>
+	);
 }
 
 export default App;
